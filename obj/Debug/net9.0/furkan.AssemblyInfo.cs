@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("furkan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ff636ca76977735623c8cfa8719a598ff310c5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("furkan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("furkan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
