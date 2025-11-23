@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arapça metinlerin Ebced (Abjad) değerini hesaplayan online araç" />
+    <title>@ViewData["Title"] - Ebced Hesaplayıcı</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year - Ebced Hesaplayıcı</p>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

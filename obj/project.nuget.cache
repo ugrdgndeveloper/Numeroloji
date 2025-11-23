@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EGmjnXJnuGk=",
+  "success": true,
+  "projectFilePath": "/Users/furkanugurdogan/Projects/furkan/furkan/furkan.csproj",
+  "expectedPackageFiles": [
+    "/Users/furkanugurdogan/.nuget/packages/microsoft.net.illink.tasks/9.0.7/microsoft.net.illink.tasks.9.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

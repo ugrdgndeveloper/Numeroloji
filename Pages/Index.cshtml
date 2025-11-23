@@ -1,0 +1,285 @@
+@page
+@model Furkan.Pages.IndexModel
+@{
+    ViewData["Title"] = "Numeroloji Hesaplayıcı";
+}
+
+<div class="card">
+    <h1>🔢 Numeroloji Hesaplayıcı</h1>
+    
+    <div class="alert alert-error" id="errorBox"></div>
+
+    <!-- Alfabe Seçimi -->
+    <div class="alphabet-selector">
+        <label>Alfabe Seçin</label>
+        <div class="alphabet-tabs">
+            <button class="tab-btn active" data-alphabet="Arabic" onclick="selectAlphabet('Arabic')">
+                <span class="tab-icon">🕌</span>
+                <span class="tab-title">Arapça</span>
+                <span class="tab-subtitle">Ebced</span>
+            </button>
+            <button class="tab-btn" data-alphabet="Hebrew" onclick="selectAlphabet('Hebrew')">
+                <span class="tab-icon">✡️</span>
+                <span class="tab-title">İbranice</span>
+                <span class="tab-subtitle">Gematria</span>
+            </button>
+            <button class="tab-btn" data-alphabet="Greek" onclick="selectAlphabet('Greek')">
+                <span class="tab-icon">🏛️</span>
+                <span class="tab-title">Yunanca</span>
+                <span class="tab-subtitle">Isopsephy</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="input-group">
+        <label for="inputText">Metni Girin</label>
+        <textarea 
+            id="inputText" 
+            placeholder="Hesaplamak istediğiniz metni buraya yazın veya aşağıdaki harflere tıklayın..."
+            autofocus
+        ></textarea>
+        <div class="char-count">
+            <span id="charCount">0</span> karakter
+        </div>
+    </div>
+
+    <!-- Arapça Klavye -->
+    <div class="keyboard-section" id="keyboard-Arabic">
+        <label>Arapça Klavye (Ebced)</label>
+        <div class="keyboard-container">
+            <div class="keyboard-row">
+                <div class="key" data-char="ا" data-value="1"><span class="key-char">ا</span><span class="key-value">1</span></div>
+                <div class="key" data-char="ب" data-value="2"><span class="key-char">ب</span><span class="key-value">2</span></div>
+                <div class="key" data-char="ج" data-value="3"><span class="key-char">ج</span><span class="key-value">3</span></div>
+                <div class="key" data-char="د" data-value="4"><span class="key-char">د</span><span class="key-value">4</span></div>
+                <div class="key" data-char="ه" data-value="5"><span class="key-char">ه</span><span class="key-value">5</span></div>
+                <div class="key" data-char="و" data-value="6"><span class="key-char">و</span><span class="key-value">6</span></div>
+                <div class="key" data-char="ز" data-value="7"><span class="key-char">ز</span><span class="key-value">7</span></div>
+                <div class="key" data-char="ح" data-value="8"><span class="key-char">ح</span><span class="key-value">8</span></div>
+                <div class="key" data-char="ط" data-value="9"><span class="key-char">ط</span><span class="key-value">9</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-char="ي" data-value="10"><span class="key-char">ي</span><span class="key-value">10</span></div>
+                <div class="key" data-char="ك" data-value="20"><span class="key-char">ك</span><span class="key-value">20</span></div>
+                <div class="key" data-char="ل" data-value="30"><span class="key-char">ل</span><span class="key-value">30</span></div>
+                <div class="key" data-char="م" data-value="40"><span class="key-char">م</span><span class="key-value">40</span></div>
+                <div class="key" data-char="ن" data-value="50"><span class="key-char">ن</span><span class="key-value">50</span></div>
+                <div class="key" data-char="س" data-value="60"><span class="key-char">س</span><span class="key-value">60</span></div>
+                <div class="key" data-char="ع" data-value="70"><span class="key-char">ع</span><span class="key-value">70</span></div>
+                <div class="key" data-char="ف" data-value="80"><span class="key-char">ف</span><span class="key-value">80</span></div>
+                <div class="key" data-char="ص" data-value="90"><span class="key-char">ص</span><span class="key-value">90</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-char="ق" data-value="100"><span class="key-char">ق</span><span class="key-value">100</span></div>
+                <div class="key" data-char="ر" data-value="200"><span class="key-char">ر</span><span class="key-value">200</span></div>
+                <div class="key" data-char="ش" data-value="300"><span class="key-char">ش</span><span class="key-value">300</span></div>
+                <div class="key" data-char="ت" data-value="400"><span class="key-char">ت</span><span class="key-value">400</span></div>
+                <div class="key" data-char="ث" data-value="500"><span class="key-char">ث</span><span class="key-value">500</span></div>
+                <div class="key" data-char="خ" data-value="600"><span class="key-char">خ</span><span class="key-value">600</span></div>
+                <div class="key" data-char="ذ" data-value="700"><span class="key-char">ذ</span><span class="key-value">700</span></div>
+                <div class="key" data-char="ض" data-value="800"><span class="key-char">ض</span><span class="key-value">800</span></div>
+                <div class="key" data-char="ظ" data-value="900"><span class="key-char">ظ</span><span class="key-value">900</span></div>
+                <div class="key" data-char="غ" data-value="1000"><span class="key-char">غ</span><span class="key-value">1000</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key key-variant" data-char="أ" data-value="1"><span class="key-char">أ</span><span class="key-value">1</span></div>
+                <div class="key key-variant" data-char="إ" data-value="1"><span class="key-char">إ</span><span class="key-value">1</span></div>
+                <div class="key key-variant" data-char="آ" data-value="1"><span class="key-char">آ</span><span class="key-value">1</span></div>
+                <div class="key key-variant" data-char="ة" data-value="5"><span class="key-char">ة</span><span class="key-value">5</span></div>
+                <div class="key key-variant" data-char="ى" data-value="10"><span class="key-char">ى</span><span class="key-value">10</span></div>
+                <div class="key key-variant" data-char="ئ" data-value="10"><span class="key-char">ئ</span><span class="key-value">10</span></div>
+                <div class="key key-space" data-char=" " data-value="0"><span class="key-char">␣</span><span class="key-value">Boşluk</span></div>
+                <div class="key key-delete" id="backspaceKey-Arabic"><span class="key-char">⌫</span><span class="key-value">Sil</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- İbranice Klavye -->
+    <div class="keyboard-section" id="keyboard-Hebrew" style="display: none;">
+        <label>İbranice Klavye (Gematria)</label>
+        <div class="keyboard-container">
+            <div class="keyboard-row">
+                <div class="key" data-char="א" data-value="1"><span class="key-char">א</span><span class="key-value">1</span></div>
+                <div class="key" data-char="ב" data-value="2"><span class="key-char">ב</span><span class="key-value">2</span></div>
+                <div class="key" data-char="ג" data-value="3"><span class="key-char">ג</span><span class="key-value">3</span></div>
+                <div class="key" data-char="ד" data-value="4"><span class="key-char">ד</span><span class="key-value">4</span></div>
+                <div class="key" data-char="ה" data-value="5"><span class="key-char">ה</span><span class="key-value">5</span></div>
+                <div class="key" data-char="ו" data-value="6"><span class="key-char">ו</span><span class="key-value">6</span></div>
+                <div class="key" data-char="ז" data-value="7"><span class="key-char">ז</span><span class="key-value">7</span></div>
+                <div class="key" data-char="ח" data-value="8"><span class="key-char">ח</span><span class="key-value">8</span></div>
+                <div class="key" data-char="ט" data-value="9"><span class="key-char">ט</span><span class="key-value">9</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-char="י" data-value="10"><span class="key-char">י</span><span class="key-value">10</span></div>
+                <div class="key" data-char="כ" data-value="20"><span class="key-char">כ</span><span class="key-value">20</span></div>
+                <div class="key" data-char="ל" data-value="30"><span class="key-char">ל</span><span class="key-value">30</span></div>
+                <div class="key" data-char="מ" data-value="40"><span class="key-char">מ</span><span class="key-value">40</span></div>
+                <div class="key" data-char="נ" data-value="50"><span class="key-char">נ</span><span class="key-value">50</span></div>
+                <div class="key" data-char="ס" data-value="60"><span class="key-char">ס</span><span class="key-value">60</span></div>
+                <div class="key" data-char="ע" data-value="70"><span class="key-char">ע</span><span class="key-value">70</span></div>
+                <div class="key" data-char="פ" data-value="80"><span class="key-char">פ</span><span class="key-value">80</span></div>
+                <div class="key" data-char="צ" data-value="90"><span class="key-char">צ</span><span class="key-value">90</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-char="ק" data-value="100"><span class="key-char">ק</span><span class="key-value">100</span></div>
+                <div class="key" data-char="ר" data-value="200"><span class="key-char">ר</span><span class="key-value">200</span></div>
+                <div class="key" data-char="ש" data-value="300"><span class="key-char">ש</span><span class="key-value">300</span></div>
+                <div class="key" data-char="ת" data-value="400"><span class="key-char">ת</span><span class="key-value">400</span></div>
+                <div class="key key-variant" data-char="ך" data-value="20"><span class="key-char">ך</span><span class="key-value">20</span></div>
+                <div class="key key-variant" data-char="ם" data-value="40"><span class="key-char">ם</span><span class="key-value">40</span></div>
+                <div class="key key-variant" data-char="ן" data-value="50"><span class="key-char">ן</span><span class="key-value">50</span></div>
+                <div class="key key-variant" data-char="ף" data-value="80"><span class="key-char">ף</span><span class="key-value">80</span></div>
+                <div class="key key-variant" data-char="ץ" data-value="90"><span class="key-char">ץ</span><span class="key-value">90</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key key-space" data-char=" " data-value="0"><span class="key-char">␣</span><span class="key-value">Boşluk</span></div>
+                <div class="key key-delete" id="backspaceKey-Hebrew"><span class="key-char">⌫</span><span class="key-value">Sil</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yunanca Klavye -->
+    <div class="keyboard-section" id="keyboard-Greek" style="display: none;">
+        <label>Yunanca Klavye (Isopsephy)</label>
+        <div class="keyboard-container">
+            <div class="keyboard-row">
+                <div class="key" data-char="α" data-value="1"><span class="key-char">α</span><span class="key-value">1</span></div>
+                <div class="key" data-char="β" data-value="2"><span class="key-char">β</span><span class="key-value">2</span></div>
+                <div class="key" data-char="γ" data-value="3"><span class="key-char">γ</span><span class="key-value">3</span></div>
+                <div class="key" data-char="δ" data-value="4"><span class="key-char">δ</span><span class="key-value">4</span></div>
+                <div class="key" data-char="ε" data-value="5"><span class="key-char">ε</span><span class="key-value">5</span></div>
+                <div class="key" data-char="ϛ" data-value="6"><span class="key-char">ϛ</span><span class="key-value">6</span></div>
+                <div class="key" data-char="ζ" data-value="7"><span class="key-char">ζ</span><span class="key-value">7</span></div>
+                <div class="key" data-char="η" data-value="8"><span class="key-char">η</span><span class="key-value">8</span></div>
+                <div class="key" data-char="θ" data-value="9"><span class="key-char">θ</span><span class="key-value">9</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-char="ι" data-value="10"><span class="key-char">ι</span><span class="key-value">10</span></div>
+                <div class="key" data-char="κ" data-value="20"><span class="key-char">κ</span><span class="key-value">20</span></div>
+                <div class="key" data-char="λ" data-value="30"><span class="key-char">λ</span><span class="key-value">30</span></div>
+                <div class="key" data-char="μ" data-value="40"><span class="key-char">μ</span><span class="key-value">40</span></div>
+                <div class="key" data-char="ν" data-value="50"><span class="key-char">ν</span><span class="key-value">50</span></div>
+                <div class="key" data-char="ξ" data-value="60"><span class="key-char">ξ</span><span class="key-value">60</span></div>
+                <div class="key" data-char="ο" data-value="70"><span class="key-char">ο</span><span class="key-value">70</span></div>
+                <div class="key" data-char="π" data-value="80"><span class="key-char">π</span><span class="key-value">80</span></div>
+                <div class="key" data-char="ϟ" data-value="90"><span class="key-char">ϟ</span><span class="key-value">90</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-char="ρ" data-value="100"><span class="key-char">ρ</span><span class="key-value">100</span></div>
+                <div class="key" data-char="σ" data-value="200"><span class="key-char">σ</span><span class="key-value">200</span></div>
+                <div class="key" data-char="τ" data-value="300"><span class="key-char">τ</span><span class="key-value">300</span></div>
+                <div class="key" data-char="υ" data-value="400"><span class="key-char">υ</span><span class="key-value">400</span></div>
+                <div class="key" data-char="φ" data-value="500"><span class="key-char">φ</span><span class="key-value">500</span></div>
+                <div class="key" data-char="χ" data-value="600"><span class="key-char">χ</span><span class="key-value">600</span></div>
+                <div class="key" data-char="ψ" data-value="700"><span class="key-char">ψ</span><span class="key-value">700</span></div>
+                <div class="key" data-char="ω" data-value="800"><span class="key-char">ω</span><span class="key-value">800</span></div>
+                <div class="key" data-char="ϡ" data-value="900"><span class="key-char">ϡ</span><span class="key-value">900</span></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key key-variant" data-char="ς" data-value="200"><span class="key-char">ς</span><span class="key-value">200</span></div>
+                <div class="key key-space" data-char=" " data-value="0"><span class="key-char">␣</span><span class="key-value">Boşluk</span></div>
+                <div class="key key-delete" id="backspaceKey-Greek"><span class="key-char">⌫</span><span class="key-value">Sil</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-group">
+        <button class="btn btn-primary" onclick="calculate()">
+            ✨ Hesapla
+        </button>
+        <button class="btn btn-secondary" onclick="clearAll()">
+            🗑️ Temizle
+        </button>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Hesaplanıyor...</p>
+    </div>
+
+    <div class="result-section" id="resultSection">
+        <div class="result-header" id="resultHeader">
+            <span class="result-system" id="resultSystem">Ebced</span>
+            <span class="result-language" id="resultLanguage">Arapça</span>
+        </div>
+        
+        <div class="total-box">
+            <div class="total-label">Toplam Değer</div>
+            <div class="total-value" id="totalValue">0</div>
+        </div>
+
+        <div class="normalized-text" id="normalizedText"></div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <h3>📊 Harf Özeti</h3>
+                <button class="copy-btn" onclick="copyTable('summaryTable')" title="Tabloyu Kopyala">
+                    📋 Kopyala
+                </button>
+            </div>
+            <table class="breakdown-table summary-table" dir="ltr" id="summaryTable">
+                <thead>
+                    <tr>
+                        <th>Harf</th>
+                        <th>Değer</th>
+                        <th>Adet</th>
+                        <th>Toplam</th>
+                    </tr>
+                    <tr class="table-desc-row">
+                        <td colspan="4">Her harfin kaç kez tekrarlandığını ve toplam değere katkısını gösterir.</td>
+                    </tr>
+                </thead>
+                <tbody id="summaryBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <h3>📝 Harf Detayı</h3>
+                <button class="copy-btn" onclick="copyTable('detailTable')" title="Tabloyu Kopyala">
+                    📋 Kopyala
+                </button>
+            </div>
+            <table class="breakdown-table" dir="ltr" id="detailTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Harf</th>
+                        <th>Değer</th>
+                    </tr>
+                    <tr class="table-desc-row">
+                        <td colspan="3">Metindeki harflerin sırasıyla listesi ve her birinin değeri.</td>
+                    </tr>
+                </thead>
+                <tbody id="breakdownBody">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tüm Sonuçları Kopyala -->
+        <div class="copy-all-container">
+            <button class="btn btn-copy-all" onclick="copyAllResults()">
+                📄 Tüm Sonuçları Kopyala (Word için)
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="info-card">
+    <h2>ℹ️ Numeroloji Sistemleri</h2>
+    <div class="info-tabs">
+        <div class="info-tab">
+            <h3>🕌 Ebced (Arapça)</h3>
+            <p>Arap alfabesindeki harflere sayısal değerler atayan geleneksel sistem. Tarih hesaplamaları ve sembolik yorumlamalar için kullanılır.</p>
+        </div>
+        <div class="info-tab">
+            <h3>✡️ Gematria (İbranice)</h3>
+            <p>İbrani alfabesindeki harflerin sayısal değerlerini hesaplayan Yahudi geleneği. Kutsal metinlerin yorumlanmasında kullanılır.</p>
+        </div>
+        <div class="info-tab">
+            <h3>🏛️ Isopsephy (Yunanca)</h3>
+            <p>Antik Yunan alfabesinin sayısal değerlendirme sistemi. Felsefi ve mistik metinlerin analizinde kullanılmıştır.</p>
+        </div>
+    </div>
+</div>
