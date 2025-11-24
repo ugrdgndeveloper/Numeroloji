@@ -265,6 +265,9 @@ function displayResult(result) {
         normalizedText.style.direction = info.direction;
     }
 
+    // Build letter grid
+    buildLetterGrid(result.Rows, info.direction);
+
     // Build summary table
     if (summaryBody && result.Rows) {
         summaryBody.innerHTML = '';
@@ -350,6 +353,41 @@ function displayResult(result) {
     }
 
     showResults();
+}
+
+// Build visual letter grid
+function buildLetterGrid(rows, direction) {
+    var letterGrid = document.getElementById('letterGrid');
+    if (!letterGrid) return;
+
+    letterGrid.innerHTML = '';
+    letterGrid.style.direction = direction;
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        
+        var box = document.createElement('div');
+        box.className = 'letter-box';
+        box.style.animationDelay = (i * 0.03) + 's';
+        
+        var number = document.createElement('div');
+        number.className = 'letter-box-number';
+        number.textContent = (i + 1).toString();
+        
+        var char = document.createElement('div');
+        char.className = 'letter-box-char';
+        char.textContent = row.Char;
+        
+        var value = document.createElement('div');
+        value.className = 'letter-box-value';
+        value.textContent = row.Value.toLocaleString('tr-TR');
+        
+        box.appendChild(number);
+        box.appendChild(char);
+        box.appendChild(value);
+        
+        letterGrid.appendChild(box);
+    }
 }
 
 // Animate number counting
@@ -480,6 +518,74 @@ function copyTable(tableId) {
     selection.removeAllRanges();
 }
 
+// Copy letter grid to clipboard
+function copyLetterGrid() {
+    var info = alphabetInfo[currentAlphabet];
+    var originalText = inputText ? inputText.value.trim() : '';
+    var letterGrid = document.getElementById('letterGrid');
+    var total = totalValue ? totalValue.textContent : '0';
+    
+    if (!letterGrid) return;
+
+    // Build HTML content
+    var html = '<html><body>';
+    
+    // Original text at the top (centered, large)
+    if (originalText) {
+        html += '<div style="text-align:center;font-size:1.8em;font-weight:700;margin:20px 0;direction:' + info.direction + ';">';
+        html += escapeHtml(originalText);
+        html += '</div>';
+    }
+    
+    // Letter grid as table
+    html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
+    
+    var boxes = letterGrid.querySelectorAll('.letter-box');
+    var cols = 20; // 20 columns per row
+    
+    for (var i = 0; i < boxes.length; i++) {
+        if (i % cols === 0) {
+            if (i > 0) html += '</tr>';
+            html += '<tr>';
+        }
+        
+        var number = boxes[i].querySelector('.letter-box-number').textContent;
+        var char = boxes[i].querySelector('.letter-box-char').textContent;
+        var value = boxes[i].querySelector('.letter-box-value').textContent;
+        
+        html += '<td style="border:2px solid #e2e8f0;padding:10px;text-align:center;min-width:60px;">';
+        html += '<div style="background:#667eea;color:white;font-size:0.8em;font-weight:600;padding:2px 8px;border-radius:10px;margin-bottom:5px;">' + number + '</div>';
+        html += '<div style="font-size:1.8em;font-weight:700;margin:5px 0;">' + char + '</div>';
+        html += '<div style="font-size:1em;font-weight:700;color:#764ba2;">' + value + '</div>';
+        html += '</td>';
+    }
+    html += '</tr>';
+    html += '</table>';
+    
+    // Total below table (centered)
+    html += '<div style="text-align:center;font-size:1.5em;font-weight:700;margin:20px 0;">';
+    html += 'TOPLAM: ' + total;
+    html += '</div>';
+    
+    html += '</body></html>';
+    
+    // Copy
+    copyHtmlToClipboard(html);
+    
+    // Visual feedback
+    var btn = document.querySelector('.grid-header .copy-btn');
+    if (btn) {
+        var originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Kopyalandı!';
+        btn.classList.add('copied');
+        
+        setTimeout(function() {
+            btn.innerHTML = originalText;
+            btn.classList.remove('copied');
+        }, 2000);
+    }
+}
+
 // Copy all results for Word
 function copyAllResults() {
     var info = alphabetInfo[currentAlphabet];
@@ -510,6 +616,38 @@ function copyAllResults() {
     html += '<p style="font-size:1.2em;"><strong>Toplam Değer:</strong> <span style="color:#667eea;font-size:1.5em;font-weight:bold;">' + total + '</span></p>';
     
     html += '<hr style="margin:20px 0;border:1px solid #e2e8f0;">';
+    
+    // Letter grid
+    var letterGrid = document.getElementById('letterGrid');
+    if (letterGrid) {
+        html += '<h3 style="color:#667eea;">🔤 Harf Analizi</h3>';
+        html += '<p style="font-size:0.9em;color:#64748b;font-style:italic;">Her harfin sırasıyla değerleri</p>';
+        
+        html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
+        var boxes = letterGrid.querySelectorAll('.letter-box');
+        var cols = 20; // 20 columns per row
+        
+        for (var i = 0; i < boxes.length; i++) {
+            if (i % cols === 0) {
+                if (i > 0) html += '</tr>';
+                html += '<tr>';
+            }
+            
+            var number = boxes[i].querySelector('.letter-box-number').textContent;
+            var char = boxes[i].querySelector('.letter-box-char').textContent;
+            var value = boxes[i].querySelector('.letter-box-value').textContent;
+            
+            html += '<td style="border:2px solid #e2e8f0;padding:10px;text-align:center;min-width:60px;">';
+            html += '<div style="background:#667eea;color:white;font-size:0.8em;font-weight:600;padding:2px 8px;border-radius:10px;margin-bottom:5px;">' + number + '</div>';
+            html += '<div style="font-size:1.8em;font-weight:700;margin:5px 0;">' + char + '</div>';
+            html += '<div style="font-size:1em;font-weight:700;color:#764ba2;">' + value + '</div>';
+            html += '</td>';
+        }
+        html += '</tr>';
+        html += '</table>';
+    }
+    
+    html += '<br>';
     
     // Summary table
     var summaryTable = document.getElementById('summaryTable');

@@ -15,11 +15,12 @@
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.MvcApplicationPartsAssemblyInfo.cache
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.RazorAssemblyInfo.cache
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.RazorAssemblyInfo.cs
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.sourcelink.json
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/rjimswa.dswa.cache.json
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/scopedcss/bundle/furkan.styles.css
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-ws0f9krsn9.gz
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-lzadsa6lrw.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/2e4s35qhzg-61n19gt1b8.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/iio4hkrue4-bqjiyaj88i.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/2s9xyontnd-c2jlpeoesf.gz
@@ -89,4 +90,4 @@
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.pdb
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.genruntimeconfig.cache
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/ref/furkan.dll
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-hi7qi2tvp7.gz
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-2yl5u8mrsd.gz

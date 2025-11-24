@@ -11,7 +11,7 @@
 
     <!-- Alfabe Seçimi -->
     <div class="alphabet-selector">
-        <label>Alfabe Seçin</label>
+        <label>Alfabe Seçin:</label>
         <div class="alphabet-tabs">
             <button class="tab-btn active" data-alphabet="Arabic" onclick="selectAlphabet('Arabic')">
                 <span class="tab-icon">🕌</span>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="input-group">
-        <label for="inputText">Metni Girin</label>
+        <label for="inputText">Metni Girin:</label>
         <textarea 
             id="inputText" 
             placeholder="Hesaplamak istediğiniz metni buraya yazın veya aşağıdaki harflere tıklayın..."
@@ -45,7 +45,7 @@
 
     <!-- Arapça Klavye -->
     <div class="keyboard-section" id="keyboard-Arabic">
-        <label>Arapça Klavye (Ebced)</label>
+        <label>Arapça Klavye (Ebced):</label>
         <div class="keyboard-container">
             <div class="keyboard-row">
                 <div class="key" data-char="ا" data-value="1"><span class="key-char">ا</span><span class="key-value">1</span></div>
@@ -96,7 +96,7 @@
 
     <!-- İbranice Klavye -->
     <div class="keyboard-section" id="keyboard-Hebrew" style="display: none;">
-        <label>İbranice Klavye (Gematria)</label>
+        <label>İbranice Klavye (Gematria):</label>
         <div class="keyboard-container">
             <div class="keyboard-row">
                 <div class="key" data-char="א" data-value="1"><span class="key-char">א</span><span class="key-value">1</span></div>
@@ -140,7 +140,7 @@
 
     <!-- Yunanca Klavye -->
     <div class="keyboard-section" id="keyboard-Greek" style="display: none;">
-        <label>Yunanca Klavye (Isopsephy)</label>
+        <label>Yunanca Klavye (Isopsephy):</label>
         <div class="keyboard-container">
             <div class="keyboard-row">
                 <div class="key" data-char="α" data-value="1"><span class="key-char">α</span><span class="key-value">1</span></div>
@@ -209,6 +209,19 @@
         </div>
 
         <div class="normalized-text" id="normalizedText"></div>
+
+        <!-- Visual Letter Grid -->
+        <div class="letter-grid-container">
+            <div class="grid-header">
+                <h3>🔤 Harf Analizi</h3>
+                <button class="copy-btn" onclick="copyLetterGrid()" title="Tabloyu Kopyala">
+                    📋 Kopyala
+                </button>
+            </div>
+            <p class="grid-description">Her harfin sırasıyla değerleri</p>
+            <div class="letter-grid" id="letterGrid">
+            </div>
+        </div>
 
         <div class="table-container">
             <div class="table-header">

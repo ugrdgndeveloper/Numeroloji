@@ -371,6 +371,119 @@ textarea:focus {
     word-wrap: break-word;
 }
 
+/* Letter Grid */
+.letter-grid-container {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.letter-grid-container h3 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.grid-description {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95em;
+    margin: 0 0 20px 0;
+    font-style: italic;
+}
+
+.letter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.letter-grid[style*="rtl"] {
+    justify-content: flex-end;
+}
+
+.letter-box {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 8px;
+    min-width: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+.letter-box:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.letter-box-number {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    font-size: 0.75em;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.letter-box-char {
+    font-size: 2em;
+    font-family: 'Traditional Arabic', 'Arial', sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+}
+
+.letter-box-value {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+    .letter-grid {
+        gap: 8px;
+    }
+    
+    .letter-box {
+        padding: 10px 6px;
+        min-width: 55px;
+        width: 55px;
+    }
+    
+    .letter-box-number {
+        font-size: 0.7em;
+        padding: 2px 8px;
+    }
+    
+    .letter-box-char {
+        font-size: 1.6em;
+    }
+    
+    .letter-box-value {
+        font-size: 0.9em;
+    }
+}
+
 /* Table */
 .table-container {
     overflow-x: auto;
@@ -383,12 +496,84 @@ textarea:focus {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: white;
     padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .table-header h3 {
     margin: 0;
     font-size: 1.1em;
     font-weight: 600;
+}
+
+/* Copy Button */
+.copy-btn {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.copy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.copy-btn.copied {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Grid header copy button (white background) */
+.grid-header .copy-btn {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border: none;
+}
+
+.grid-header .copy-btn:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
+}
+
+.copy-all-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-copy-all {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-copy-all:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-copy-all:active {
+    transform: translateY(0);
+}
+
+.btn-copy-all.copied {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .table-desc-row {
