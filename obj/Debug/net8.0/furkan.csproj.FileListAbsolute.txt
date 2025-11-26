@@ -23,10 +23,10 @@
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/furkan.genruntimeconfig.cache
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/ref/furkan.dll
 /Users/furkanugurdogan/Projects/furkan/furkan/bin/Debug/net8.0/furkan.staticwebassets.endpoints.json
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/rpswa.dswa.cache.json
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/rjimswa.dswa.cache.json
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets.build.json.cache
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets.build.endpoints.json
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/swae.build.ex.cache
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets/msbuild.furkan.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets/msbuild.furkan.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets/msbuild.build.furkan.props
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.furkan.props
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.furkan.props
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net8.0/staticwebassets.pack.json

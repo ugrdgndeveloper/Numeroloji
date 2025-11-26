@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "t7Ok2xnXE+Q=",
+  "dgSpecHash": "M55yLc4ug38=",
   "success": true,
   "projectFilePath": "/Users/furkanugurdogan/Projects/furkan/furkan/furkan.csproj",
   "expectedPackageFiles": [
-    "/Users/furkanugurdogan/.nuget/packages/microsoft.net.illink.tasks/9.0.8/microsoft.net.illink.tasks.9.0.8.nupkg.sha512"
+    "/Users/furkanugurdogan/.nuget/packages/microsoft.net.illink.tasks/8.0.19/microsoft.net.illink.tasks.8.0.19.nupkg.sha512",
+    "/Users/furkanugurdogan/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "/Users/furkanugurdogan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
+    "/Users/furkanugurdogan/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.19/microsoft.netcore.app.host.osx-arm64.8.0.19.nupkg.sha512"
   ],
   "logs": []
 }
