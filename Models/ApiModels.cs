@@ -16,12 +16,23 @@ public record CalculationResult(
     string Normalized,
     int Total,
     List<LetterRow> Rows,
-    AlphabetType Alphabet
+    AlphabetType Alphabet,
+    EbcedVariations? Variations
 );
 
 public record LetterRow(
     string Char,
     int Value
+);
+
+// Ebced Variations (Arapça için)
+public record EbcedVariations(
+    int SmallEbced,      // Küçük Ebced
+    int BigEbced,        // Büyük Ebced (+ ال)
+    int SmallestEbced,   // En Küçük Ebced (tekrarsız)
+    int BiggestEbced,    // En Büyük Ebced (maksimum)
+    int ShamsiCount,     // Şemsi harf sayısı
+    int QamariCount      // Kameri harf sayısı
 );
 
 public record ErrorResponse(string Message);
@@ -36,6 +47,7 @@ public record EbcedRow(string Char, int Value);
 [JsonSerializable(typeof(CalculationResult))]
 [JsonSerializable(typeof(LetterRow))]
 [JsonSerializable(typeof(List<LetterRow>))]
+[JsonSerializable(typeof(EbcedVariations))]
 [JsonSerializable(typeof(EbcedRequest))]
 [JsonSerializable(typeof(EbcedResult))]
 [JsonSerializable(typeof(EbcedRow))]

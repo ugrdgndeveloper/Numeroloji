@@ -204,8 +204,56 @@
         </div>
         
         <div class="total-box">
-            <div class="total-label">Toplam Değer</div>
+            <div class="total-label">Toplam Ebced Değeri</div>
             <div class="total-value" id="totalValue">0</div>
+        </div>
+
+        <!-- Ebced Variations (Arapça için) -->
+        <div class="variations-container" id="variationsContainer" style="display: none;">
+            <div class="variations-header">
+                <h3>📊 Ebced Hesaplama Türleri</h3>
+                <button class="copy-btn" onclick="copyVariations()" title="Varyasyonları Kopyala">
+                    📋 Kopyala
+                </button>
+            </div>
+            <div class="variations-grid">
+                <div class="variation-card">
+                    <div class="variation-label">Küçük Ebced</div>
+                    <div class="variation-value" id="smallEbced">0</div>
+                    <div class="variation-desc">Normal hesaplama</div>
+                </div>
+                <div class="variation-card">
+                    <div class="variation-label">Büyük Ebced</div>
+                    <div class="variation-value" id="bigEbced">0</div>
+                    <div class="variation-desc">+ ال (Elif-Lam)</div>
+                </div>
+                <div class="variation-card">
+                    <div class="variation-label">En Küçük Ebced</div>
+                    <div class="variation-value" id="smallestEbced">0</div>
+                    <div class="variation-desc">Tekrarsız harfler</div>
+                </div>
+                <div class="variation-card">
+                    <div class="variation-label">En Büyük Ebced</div>
+                    <div class="variation-value" id="biggestEbced">0</div>
+                    <div class="variation-desc">Maksimum değer</div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 20px;">🌙 Şemsi ve Kameri Harfler</h3>
+            <div class="shamsi-qamari-grid">
+                <div class="sq-card shamsi">
+                    <div class="sq-icon">☀️</div>
+                    <div class="sq-label">Şemsi Harfler</div>
+                    <div class="sq-value" id="shamsiCount">0</div>
+                    <div class="sq-desc">ت، ث، د، ذ، ر، ز، س، ش، ص، ض، ط، ظ، ل، ن</div>
+                </div>
+                <div class="sq-card qamari">
+                    <div class="sq-icon">🌙</div>
+                    <div class="sq-label">Kameri Harfler</div>
+                    <div class="sq-value" id="qamariCount">0</div>
+                    <div class="sq-desc">ا، ب، ج، ح، خ، ع، غ، ف، ق، ك، م، ه، و، ي</div>
+                </div>
+            </div>
         </div>
 
         <div class="normalized-text" id="normalizedText"></div>

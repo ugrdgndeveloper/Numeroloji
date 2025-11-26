@@ -265,6 +265,30 @@ function displayResult(result) {
         normalizedText.style.direction = info.direction;
     }
 
+    // Show variations for Arabic
+    var variationsContainer = document.getElementById('variationsContainer');
+    if (variationsContainer) {
+        if (result.Variations && currentAlphabet === 'Arabic') {
+            variationsContainer.style.display = 'block';
+            
+            // Update variation values
+            if (document.getElementById('smallEbced'))
+                document.getElementById('smallEbced').textContent = result.Variations.SmallEbced.toLocaleString('tr-TR');
+            if (document.getElementById('bigEbced'))
+                document.getElementById('bigEbced').textContent = result.Variations.BigEbced.toLocaleString('tr-TR');
+            if (document.getElementById('smallestEbced'))
+                document.getElementById('smallestEbced').textContent = result.Variations.SmallestEbced.toLocaleString('tr-TR');
+            if (document.getElementById('biggestEbced'))
+                document.getElementById('biggestEbced').textContent = result.Variations.BiggestEbced.toLocaleString('tr-TR');
+            if (document.getElementById('shamsiCount'))
+                document.getElementById('shamsiCount').textContent = result.Variations.ShamsiCount.toLocaleString('tr-TR');
+            if (document.getElementById('qamariCount'))
+                document.getElementById('qamariCount').textContent = result.Variations.QamariCount.toLocaleString('tr-TR');
+        } else {
+            variationsContainer.style.display = 'none';
+        }
+    }
+
     // Build letter grid
     buildLetterGrid(result.Rows, info.direction);
 
@@ -464,6 +488,113 @@ function hideResults() {
     }
 }
 
+// Copy variations to clipboard
+function copyVariations() {
+    var originalText = inputText ? inputText.value.trim() : '';
+    
+    var smallEbced = document.getElementById('smallEbced') ? document.getElementById('smallEbced').textContent : '0';
+    var bigEbced = document.getElementById('bigEbced') ? document.getElementById('bigEbced').textContent : '0';
+    var smallestEbced = document.getElementById('smallestEbced') ? document.getElementById('smallestEbced').textContent : '0';
+    var biggestEbced = document.getElementById('biggestEbced') ? document.getElementById('biggestEbced').textContent : '0';
+    var shamsiCount = document.getElementById('shamsiCount') ? document.getElementById('shamsiCount').textContent : '0';
+    var qamariCount = document.getElementById('qamariCount') ? document.getElementById('qamariCount').textContent : '0';
+    
+    // Build HTML content
+    var html = '<html><body>';
+    
+    html += '<h2 style="color:#667eea;text-align:center;">Ebced Hesaplama Türleri</h2>';
+    
+    // Original text
+    if (originalText) {
+        html += '<div style="text-align:center;font-size:1.5em;font-weight:700;margin:15px 0;direction:rtl;">';
+        html += escapeHtml(originalText);
+        html += '</div>';
+    }
+    
+    html += '<hr style="margin:20px 0;border:1px solid #e2e8f0;">';
+    
+    // Variations table
+    html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
+    html += '<thead>';
+    html += '<tr style="background:#667eea;color:white;">';
+    html += '<th style="border:2px solid #000;padding:12px;text-align:center;">Hesaplama Türü</th>';
+    html += '<th style="border:2px solid #000;padding:12px;text-align:center;">Değer</th>';
+    html += '<th style="border:2px solid #000;padding:12px;text-align:center;">Açıklama</th>';
+    html += '</tr>';
+    html += '</thead>';
+    html += '<tbody>';
+    
+    html += '<tr>';
+    html += '<td style="border:2px solid #000;padding:10px;font-weight:600;">Küçük Ebced</td>';
+    html += '<td style="border:2px solid #000;padding:10px;text-align:center;font-size:1.2em;font-weight:700;color:#667eea;">' + smallEbced + '</td>';
+    html += '<td style="border:2px solid #000;padding:10px;">Normal hesaplama</td>';
+    html += '</tr>';
+    
+    html += '<tr>';
+    html += '<td style="border:2px solid #000;padding:10px;font-weight:600;">Büyük Ebced</td>';
+    html += '<td style="border:2px solid #000;padding:10px;text-align:center;font-size:1.2em;font-weight:700;color:#667eea;">' + bigEbced + '</td>';
+    html += '<td style="border:2px solid #000;padding:10px;">+ ال (Elif-Lam)</td>';
+    html += '</tr>';
+    
+    html += '<tr>';
+    html += '<td style="border:2px solid #000;padding:10px;font-weight:600;">En Küçük Ebced</td>';
+    html += '<td style="border:2px solid #000;padding:10px;text-align:center;font-size:1.2em;font-weight:700;color:#667eea;">' + smallestEbced + '</td>';
+    html += '<td style="border:2px solid #000;padding:10px;">Tekrarsız harfler</td>';
+    html += '</tr>';
+    
+    html += '<tr>';
+    html += '<td style="border:2px solid #000;padding:10px;font-weight:600;">En Büyük Ebced</td>';
+    html += '<td style="border:2px solid #000;padding:10px;text-align:center;font-size:1.2em;font-weight:700;color:#667eea;">' + biggestEbced + '</td>';
+    html += '<td style="border:2px solid #000;padding:10px;">Maksimum değer</td>';
+    html += '</tr>';
+    
+    html += '</tbody>';
+    html += '</table>';
+    
+    html += '<hr style="margin:20px 0;border:1px solid #e2e8f0;">';
+    
+    // Shamsi & Qamari
+    html += '<h3 style="color:#667eea;text-align:center;">Şemsi ve Kameri Harfler</h3>';
+    html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
+    html += '<thead>';
+    html += '<tr style="background:#667eea;color:white;">';
+    html += '<th style="border:2px solid #000;padding:12px;text-align:center;width:50%;">☀️ Şemsi Harfler</th>';
+    html += '<th style="border:2px solid #000;padding:12px;text-align:center;width:50%;">🌙 Kameri Harfler</th>';
+    html += '</tr>';
+    html += '</thead>';
+    html += '<tbody>';
+    html += '<tr>';
+    html += '<td style="border:2px solid #000;padding:15px;text-align:center;background:#fef3c7;">';
+    html += '<div style="font-size:2em;font-weight:700;color:#d97706;margin-bottom:10px;">' + shamsiCount + ' adet</div>';
+    html += '<div style="direction:rtl;color:#92400e;">ت، ث، د، ذ، ر، ز، س، ش، ص، ض، ط، ظ، ل، ن</div>';
+    html += '</td>';
+    html += '<td style="border:2px solid #000;padding:15px;text-align:center;background:#dbeafe;">';
+    html += '<div style="font-size:2em;font-weight:700;color:#2563eb;margin-bottom:10px;">' + qamariCount + ' adet</div>';
+    html += '<div style="direction:rtl;color:#1e3a8a;">ا، ب، ج، ح، خ، ع، غ، ف، ق، ك، م، ه، و، ي</div>';
+    html += '</td>';
+    html += '</tr>';
+    html += '</tbody>';
+    html += '</table>';
+    
+    html += '</body></html>';
+    
+    // Copy
+    copyHtmlToClipboard(html);
+    
+    // Visual feedback
+    var btn = document.querySelector('.variations-header .copy-btn');
+    if (btn) {
+        var originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Kopyalandı!';
+        btn.classList.add('copied');
+        
+        setTimeout(function() {
+            btn.innerHTML = originalText;
+            btn.classList.remove('copied');
+        }, 2000);
+    }
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Page loaded, initializing...');
@@ -541,7 +672,7 @@ function copyLetterGrid() {
     html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
     
     var boxes = letterGrid.querySelectorAll('.letter-box');
-    var cols = 20; // 20 columns per row
+    var cols = 10; // FIXED: 10 columns per row
     
     for (var i = 0; i < boxes.length; i++) {
         if (i % cols === 0) {
@@ -553,12 +684,13 @@ function copyLetterGrid() {
         var char = boxes[i].querySelector('.letter-box-char').textContent;
         var value = boxes[i].querySelector('.letter-box-value').textContent;
         
-        html += '<td style="border:2px solid #e2e8f0;padding:10px;text-align:center;min-width:60px;">';
+        html += '<td style="border:2px solid #000;padding:10px;text-align:center;width:80px;">';
         html += '<div style="background:#667eea;color:white;font-size:0.8em;font-weight:600;padding:2px 8px;border-radius:10px;margin-bottom:5px;">' + number + '</div>';
         html += '<div style="font-size:1.8em;font-weight:700;margin:5px 0;">' + char + '</div>';
         html += '<div style="font-size:1em;font-weight:700;color:#764ba2;">' + value + '</div>';
         html += '</td>';
     }
+    
     html += '</tr>';
     html += '</table>';
     
@@ -625,7 +757,7 @@ function copyAllResults() {
         
         html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
         var boxes = letterGrid.querySelectorAll('.letter-box');
-        var cols = 20; // 20 columns per row
+        var cols = 10; // FIXED: 10 columns per row
         
         for (var i = 0; i < boxes.length; i++) {
             if (i % cols === 0) {
@@ -637,12 +769,13 @@ function copyAllResults() {
             var char = boxes[i].querySelector('.letter-box-char').textContent;
             var value = boxes[i].querySelector('.letter-box-value').textContent;
             
-            html += '<td style="border:2px solid #e2e8f0;padding:10px;text-align:center;min-width:60px;">';
+            html += '<td style="border:2px solid #000;padding:10px;text-align:center;width:80px;">';
             html += '<div style="background:#667eea;color:white;font-size:0.8em;font-weight:600;padding:2px 8px;border-radius:10px;margin-bottom:5px;">' + number + '</div>';
             html += '<div style="font-size:1.8em;font-weight:700;margin:5px 0;">' + char + '</div>';
             html += '<div style="font-size:1em;font-weight:700;color:#764ba2;">' + value + '</div>';
             html += '</td>';
         }
+        
         html += '</tr>';
         html += '</table>';
     }

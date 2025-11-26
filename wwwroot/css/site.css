@@ -357,6 +357,147 @@ textarea:focus {
     letter-spacing: 2px;
 }
 
+/* Variations Container */
+.variations-container {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.variations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.variations-container h3 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.variations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.variation-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.variation-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.variation-label {
+    font-size: 0.9em;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.variation-value {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.variation-desc {
+    font-size: 0.8em;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* Shamsi & Qamari Cards */
+.shamsi-qamari-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.sq-card {
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sq-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sq-card.shamsi {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid #fbbf24;
+}
+
+.sq-card.qamari {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border: 2px solid #3b82f6;
+}
+
+.sq-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.sq-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sq-card.shamsi .sq-label {
+    color: #b45309;
+}
+
+.sq-card.qamari .sq-label {
+    color: #1e40af;
+}
+
+.sq-value {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sq-card.shamsi .sq-value {
+    color: #d97706;
+}
+
+.sq-card.qamari .sq-value {
+    color: #2563eb;
+}
+
+.sq-desc {
+    font-size: 0.85em;
+    line-height: 1.6;
+    opacity: 0.8;
+    direction: rtl;
+}
+
+.sq-card.shamsi .sq-desc {
+    color: #92400e;
+}
+
+.sq-card.qamari .sq-desc {
+    color: #1e3a8a;
+}
+
 .normalized-text {
     background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
     padding: 25px;

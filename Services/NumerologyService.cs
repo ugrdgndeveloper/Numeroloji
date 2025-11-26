@@ -18,6 +18,18 @@ public class NumerologyService
         ['خ'] = 600, ['ذ'] = 700, ['ض'] = 800, ['ظ'] = 900, ['غ'] = 1000
     }.ToFrozenDictionary();
 
+    // Şemsi Harfler (14 harf) - el- takısından sonra okunur
+    private static readonly FrozenSet<char> _shamsiLetters = new HashSet<char>
+    {
+        'ت', 'ث', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ل', 'ن'
+    }.ToFrozenSet();
+
+    // Kameri Harfler (14 harf) - el- takısındaki lam okunur
+    private static readonly FrozenSet<char> _qamariLetters = new HashSet<char>
+    {
+        'ا', 'ب', 'ج', 'ح', 'خ', 'ع', 'غ', 'ف', 'ق', 'ك', 'م', 'ه', 'و', 'ي'
+    }.ToFrozenSet();
+
     // İbranice Gematria
     private static readonly FrozenDictionary<char, int> _hebrewMap = new Dictionary<char, int>
     {
@@ -95,7 +107,7 @@ public class NumerologyService
 
         if (cleanChars.Length == 0)
         {
-            return new CalculationResult("", 0, new List<LetterRow>(), alphabet);
+            return new CalculationResult("", 0, new List<LetterRow>(), alphabet, null);
         }
 
         var normalized = new string(cleanChars);
@@ -109,7 +121,51 @@ public class NumerologyService
             total += value;
         }
 
-        return new CalculationResult(normalized, total, rows, alphabet);
+        // Arapça için ek hesaplamalar
+        EbcedVariations? variations = null;
+        if (alphabet == AlphabetType.Arabic)
+        {
+            variations = CalculateArabicVariations(cleanChars, total);
+        }
+
+        return new CalculationResult(normalized, total, rows, alphabet, variations);
+    }
+
+    private EbcedVariations CalculateArabicVariations(char[] chars, int smallEbced)
+    {
+        // Küçük Ebced - normal hesaplama (zaten var)
+        
+        // Büyük Ebced - "ال" (Elif-Lam) eklenir = 1 + 30 = 31
+        int bigEbced = smallEbced + 31;
+        
+        // En Küçük Ebced - tekrarlanan harfler bir kez sayılır
+        var uniqueChars = new HashSet<char>(chars);
+        int smallestEbced = 0;
+        foreach (var ch in uniqueChars)
+        {
+            smallestEbced += _arabicMap.GetValueOrDefault(ch, 0);
+        }
+        
+        // En Büyük Ebced - her harfin maksimum değeri (غ = 1000)
+        int biggestEbced = chars.Length * 1000;
+        
+        // Şemsi ve Kameri sayıları
+        int shamsiCount = 0;
+        int qamariCount = 0;
+        foreach (var ch in chars)
+        {
+            if (_shamsiLetters.Contains(ch)) shamsiCount++;
+            if (_qamariLetters.Contains(ch)) qamariCount++;
+        }
+
+        return new EbcedVariations(
+            smallEbced,
+            bigEbced,
+            smallestEbced,
+            biggestEbced,
+            shamsiCount,
+            qamariCount
+        );
     }
 
     public int CalculateTotal(string input, AlphabetType alphabet)
