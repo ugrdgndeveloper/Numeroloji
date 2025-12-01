@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G7E2xNPJAywcdGUxfFvI7MvngpKVkCq4jIZddnroXOk=",
+  "Hash": "8v1STyJ5J4+fSHjw1bjtejzCQ3XZGcdZYlD5j3oOKrs=",
   "Source": "furkan",
   "BasePath": "_content/furkan",
   "Mode": "Default",
@@ -1025,12 +1025,12 @@
       "OriginalItemSpec": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-x8t75dv4ih.gz",
+      "Identity": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
       "SourceId": "furkan",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/furkan",
-      "RelativePath": "js/site#[.{fingerprint=x8t75dv4ih}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=3ybke5hbl8}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1039,8 +1039,8 @@
       "RelatedAsset": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ltboerqha2",
-      "Integrity": "2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0=",
+      "Fingerprint": "ef5o0zvone",
+      "Integrity": "hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x8t75dv4ih",
-      "Integrity": "Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ=",
+      "Fingerprint": "3ybke5hbl8",
+      "Integrity": "hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
@@ -3240,13 +3240,13 @@
       ]
     },
     {
-      "Route": "js/site.js",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-x8t75dv4ih.gz",
+      "Route": "js/site.3ybke5hbl8.js",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000152835091"
+          "Quality": "0.000152765047"
         }
       ],
       "ResponseHeaders": [
@@ -3256,19 +3256,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6542"
+          "Value": "6545"
         },
         {
           "Name": "ETag",
-          "Value": "\"2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0=\""
+          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:01:04 GMT"
+          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -3284,18 +3284,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ=\""
+          "Value": "W/\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "3ybke5hbl8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ="
+          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
         }
       ]
     },
     {
-      "Route": "js/site.js",
+      "Route": "js/site.3ybke5hbl8.js",
       "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3305,7 +3313,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31417"
+          "Value": "31427"
         },
         {
           "Name": "Content-Type",
@@ -3313,121 +3321,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ=\""
+          "Value": "\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:01:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js.gz",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-x8t75dv4ih.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6542"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:01:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.x8t75dv4ih.js",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-x8t75dv4ih.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000152835091"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6542"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:01:04 GMT"
+          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x8t75dv4ih"
+          "Value": "3ybke5hbl8"
         },
         {
           "Name": "label",
@@ -3435,13 +3343,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ="
+          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
         }
       ]
     },
     {
-      "Route": "js/site.x8t75dv4ih.js",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js",
+      "Route": "js/site.3ybke5hbl8.js.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3450,7 +3358,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31417"
+          "Value": "6545"
         },
         {
           "Name": "Content-Type",
@@ -3458,56 +3366,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ=\""
+          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:01:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "x8t75dv4ih"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Lwe+Pi85PMy50eOAxfzgH7SQMZ+otEY45hc5Ked3VVQ="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.x8t75dv4ih.js.gz",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-x8t75dv4ih.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6542"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:01:04 GMT"
+          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3525,7 +3388,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x8t75dv4ih"
+          "Value": "3ybke5hbl8"
         },
         {
           "Name": "label",
@@ -3533,7 +3396,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2UszkxjenqReBAKWaPCaUScBX7nGbszx8ljWtVUENm0="
+          "Value": "sha256-hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000152765047"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6545"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31427"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM="
         }
       ]
     },

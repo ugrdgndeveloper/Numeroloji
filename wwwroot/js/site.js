@@ -58,7 +58,7 @@ function selectAlphabet(alphabet) {
     
     // Update character count
     if (charCount) {
-        charCount.textContent = '0';
+        charCount.textContent = '0 harf';
         charCount.style.color = '#667eea';
     }
     
@@ -447,7 +447,7 @@ function clearAll() {
     }
     
     if (charCount) {
-        charCount.textContent = '0';
+        charCount.textContent = '0 harf';
         charCount.style.color = '#667eea';
     }
     

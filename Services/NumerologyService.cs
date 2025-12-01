@@ -5,26 +5,67 @@ namespace Furkan.Services;
 
 public class NumerologyService
 {
-    // Arapça Ebced
-    private static readonly FrozenDictionary<char, int> _arabicMap = new Dictionary<char, int>
+    // Harf bilgileri (Normal, EnKüçük, Büyük, EnBüyük)
+    private static readonly FrozenDictionary<char, ArabicLetterInfo> _arabicLetterInfo = new Dictionary<char, ArabicLetterInfo>
     {
-        ['ا'] = 1, ['أ'] = 1, ['إ'] = 1, ['آ'] = 1,
-        ['ب'] = 2, ['ج'] = 3, ['د'] = 4, ['ه'] = 5, ['ة'] = 5,
-        ['و'] = 6, ['ز'] = 7, ['ح'] = 8, ['ط'] = 9,
-        ['ي'] = 10, ['ى'] = 10, ['ئ'] = 10,
-        ['ك'] = 20, ['ک'] = 20, ['ل'] = 30, ['م'] = 40, ['ن'] = 50,
-        ['س'] = 60, ['ع'] = 70, ['ف'] = 80, ['ص'] = 90,
-        ['ق'] = 100, ['ر'] = 200, ['ش'] = 300, ['ت'] = 400, ['ث'] = 500,
-        ['خ'] = 600, ['ذ'] = 700, ['ض'] = 800, ['ظ'] = 900, ['غ'] = 1000
+        ['ا'] = new(1, 1, 111, 13),
+        ['أ'] = new(1, 1, 111, 13),
+        ['إ'] = new(1, 1, 111, 13),
+        ['آ'] = new(1, 1, 111, 13),
+        ['ء'] = new(1, 1, 111, 13),
+        ['ٱ'] = new(1, 1, 111, 13),
+        ['ﭐ'] = new(1, 1, 111, 13),
+        ['ﭑ'] = new(1, 1, 111, 13),
+        ['ب'] = new(2, 2, 3, 611),
+        ['ج'] = new(3, 3, 53, 1035),
+        ['د'] = new(4, 4, 35, 278),
+        ['ه'] = new(5, 5, 6, 705),
+        ['ة'] = new(5, 5, 6, 705),
+        ['و'] = new(6, 6, 13, 465),
+        ['ؤ'] = new(6, 6, 13, 465),
+        ['ز'] = new(7, 7, 8, 137),
+        ['ح'] = new(8, 8, 9, 606),
+        ['ط'] = new(9, 9, 10, 535),
+        ['ي'] = new(10, 10, 11, 575),
+        ['ى'] = new(10, 10, 11, 575),
+        ['ئ'] = new(10, 10, 11, 575),
+        ['ك'] = new(20, 8, 101, 630),
+        ['ک'] = new(20, 8, 101, 630),
+        ['ل'] = new(30, 6, 71, 1090),
+        ['م'] = new(40, 4, 90, 333),
+        ['ن'] = new(50, 2, 106, 760),
+        ['س'] = new(60, 0, 120, 520),  // Sin - yoksa 0
+        ['ع'] = new(70, 10, 130, 192),
+        ['ف'] = new(80, 8, 81, 651),
+        ['ص'] = new(90, 6, 95, 590),
+        ['ق'] = new(100, 10, 181, 651),
+        ['ر'] = new(200, 8, 201, 502),
+        ['ش'] = new(300, 6, 360, 1077),
+        ['ت'] = new(400, 4, 401, 320),
+        ['ث'] = new(500, 2, 501, 747),
+        ['خ'] = new(600, 0, 601, 512),  // Ha - yoksa 0
+        ['ذ'] = new(700, 10, 701, 179),
+        ['ض'] = new(800, 8, 805, 653),
+        ['ظ'] = new(900, 6, 901, 577),
+        ['غ'] = new(1000, 10, 1060, 111)
     }.ToFrozenDictionary();
 
-    // Şemsi Harfler (14 harf) - el- takısından sonra okunur
+    // Eski map sadece normal değerler için (geriye uyumluluk)
+    private static FrozenDictionary<char, int> GetArabicNormalMap()
+    {
+        return _arabicLetterInfo.ToFrozenDictionary(
+            kvp => kvp.Key,
+            kvp => kvp.Value.Normal
+        );
+    }
+
+    // Şemsi Harfler (14 harf)
     private static readonly FrozenSet<char> _shamsiLetters = new HashSet<char>
     {
         'ت', 'ث', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ل', 'ن'
     }.ToFrozenSet();
 
-    // Kameri Harfler (14 harf) - el- takısındaki lam okunur
+    // Kameri Harfler (14 harf)
     private static readonly FrozenSet<char> _qamariLetters = new HashSet<char>
     {
         'ا', 'ب', 'ج', 'ح', 'خ', 'ع', 'غ', 'ف', 'ق', 'ك', 'م', 'ه', 'و', 'ي'
@@ -44,14 +85,12 @@ public class NumerologyService
     // Yunanca Isopsephy
     private static readonly FrozenDictionary<char, int> _greekMap = new Dictionary<char, int>
     {
-        // Küçük harfler
         ['α'] = 1, ['β'] = 2, ['γ'] = 3, ['δ'] = 4, ['ε'] = 5,
         ['ϛ'] = 6, ['ζ'] = 7, ['η'] = 8, ['θ'] = 9,
         ['ι'] = 10, ['κ'] = 20, ['λ'] = 30, ['μ'] = 40, ['ν'] = 50,
         ['ξ'] = 60, ['ο'] = 70, ['π'] = 80, ['ϟ'] = 90,
         ['ρ'] = 100, ['σ'] = 200, ['ς'] = 200, ['τ'] = 300, ['υ'] = 400,
         ['φ'] = 500, ['χ'] = 600, ['ψ'] = 700, ['ω'] = 800, ['ϡ'] = 900,
-        // Büyük harfler
         ['Α'] = 1, ['Β'] = 2, ['Γ'] = 3, ['Δ'] = 4, ['Ε'] = 5,
         ['Ϛ'] = 6, ['Ζ'] = 7, ['Η'] = 8, ['Θ'] = 9,
         ['Ι'] = 10, ['Κ'] = 20, ['Λ'] = 30, ['Μ'] = 40, ['Ν'] = 50,
@@ -60,7 +99,6 @@ public class NumerologyService
         ['Φ'] = 500, ['Χ'] = 600, ['Ψ'] = 700, ['Ω'] = 800, ['Ϡ'] = 900
     }.ToFrozenDictionary();
 
-    // Arapça harekeler (diacritics)
     private static readonly FrozenSet<char> _arabicDiacritics = CreateArabicDiacritics();
     
     private static FrozenSet<char> CreateArabicDiacritics()
@@ -70,10 +108,11 @@ public class NumerologyService
         for (int i = 0x64B; i <= 0x65F; i++) set.Add((char)i);
         set.Add('\u0670');
         set.Add('\u0640');
+        set.Add('\u0656');
+        set.Add('\u0654');
         return set.ToFrozenSet();
     }
 
-    // İbranice nikkud (sesli harf işaretleri)
     private static readonly FrozenSet<char> _hebrewDiacritics = CreateHebrewDiacritics();
     
     private static FrozenSet<char> CreateHebrewDiacritics()
@@ -86,7 +125,6 @@ public class NumerologyService
         return set.ToFrozenSet();
     }
 
-    // Yunanca tonos işaretleri
     private static readonly FrozenSet<char> _greekDiacritics = new HashSet<char>
     {
         '\u0300', '\u0301', '\u0302', '\u0303', '\u0304', '\u0305',
@@ -121,33 +159,32 @@ public class NumerologyService
             total += value;
         }
 
-        // Arapça için ek hesaplamalar
         EbcedVariations? variations = null;
         if (alphabet == AlphabetType.Arabic)
         {
-            variations = CalculateArabicVariations(cleanChars, total);
+            variations = CalculateArabicVariations(cleanChars);
         }
 
         return new CalculationResult(normalized, total, rows, alphabet, variations);
     }
 
-    private EbcedVariations CalculateArabicVariations(char[] chars, int smallEbced)
+    private EbcedVariations CalculateArabicVariations(char[] chars)
     {
-        // Küçük Ebced - normal hesaplama (zaten var)
+        int smallEbced = 0;      // Küçük-Asıl Ebced
+        int smallestEbced = 0;   // En Küçük Ebced
+        int bigEbced = 0;        // Büyük Ebced
+        int biggestEbced = 0;    // En Büyük Ebced
         
-        // Büyük Ebced - "ال" (Elif-Lam) eklenir = 1 + 30 = 31
-        int bigEbced = smallEbced + 31;
-        
-        // En Küçük Ebced - tekrarlanan harfler bir kez sayılır
-        var uniqueChars = new HashSet<char>(chars);
-        int smallestEbced = 0;
-        foreach (var ch in uniqueChars)
+        foreach (var ch in chars)
         {
-            smallestEbced += _arabicMap.GetValueOrDefault(ch, 0);
+            if (_arabicLetterInfo.TryGetValue(ch, out var info))
+            {
+                smallEbced += info.Normal;
+                smallestEbced += info.Smallest;
+                bigEbced += info.Big;
+                biggestEbced += info.Biggest;
+            }
         }
-        
-        // En Büyük Ebced - her harfin maksimum değeri (غ = 1000)
-        int biggestEbced = chars.Length * 1000;
         
         // Şemsi ve Kameri sayıları
         int shamsiCount = 0;
@@ -188,10 +225,10 @@ public class NumerologyService
 
     private FrozenDictionary<char, int> GetMap(AlphabetType alphabet) => alphabet switch
     {
-        AlphabetType.Arabic => _arabicMap,
+        AlphabetType.Arabic => GetArabicNormalMap(),
         AlphabetType.Hebrew => _hebrewMap,
         AlphabetType.Greek => _greekMap,
-        _ => _arabicMap
+        _ => GetArabicNormalMap()
     };
 
     private FrozenSet<char> GetDiacritics(AlphabetType alphabet) => alphabet switch
@@ -210,6 +247,9 @@ public class NumerologyService
         _ => new AlphabetInfo("Ebced", "Arapça", "rtl")
     };
 }
+
+// Arapça harf bilgisi
+public record ArabicLetterInfo(int Normal, int Smallest, int Big, int Biggest);
 
 public enum AlphabetType
 {

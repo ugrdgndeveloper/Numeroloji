@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 19:04:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/furkan/js/site.3ybke5hbl8.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3ybke5hbl8"},{"Name":"integrity","Value":"sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="},{"Name":"label","Value":"_content/furkan/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"31427"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 01 Dec 2025 20:21:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/furkan/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Lwe\u002BPi85PMy50eOAxfzgH7SQMZ\u002BotEY45hc5Ked3VVQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"31417"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Lwe\u002BPi85PMy50eOAxfzgH7SQMZ\u002BotEY45hc5Ked3VVQ=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Nov 2025 21:01:04 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/furkan/js/site.x8t75dv4ih.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x8t75dv4ih"},{"Name":"integrity","Value":"sha256-Lwe\u002BPi85PMy50eOAxfzgH7SQMZ\u002BotEY45hc5Ked3VVQ="},{"Name":"label","Value":"_content/furkan/js/site.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"31417"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Lwe\u002BPi85PMy50eOAxfzgH7SQMZ\u002BotEY45hc5Ked3VVQ=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Nov 2025 21:01:04 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"31427"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 01 Dec 2025 20:21:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/furkan/lib/bootstrap/dist/css/bootstrap-grid.bqjiyaj88i.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>
