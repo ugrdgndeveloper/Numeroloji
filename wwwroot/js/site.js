@@ -769,7 +769,7 @@ function copyLetterGrid() {
     html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
 
     var boxes = letterGrid.querySelectorAll('.letter-box');
-    var cols = 10; // FIXED: 10 columns per row
+    var cols = 8; // FIXED: 8 columns per row
 
     for (var i = 0; i < boxes.length; i++) {
         if (i % cols === 0) {
@@ -781,10 +781,10 @@ function copyLetterGrid() {
         var char = boxes[i].querySelector('.letter-box-char').textContent;
         var value = boxes[i].querySelector('.letter-box-value').textContent;
 
-        html += '<td style="border:2px solid #000;padding:10px;text-align:center;width:80px;">';
-        html += '<div style="background:#667eea;color:white;font-size:0.8em;font-weight:600;padding:2px 8px;border-radius:10px;margin-bottom:5px;">' + number + '</div>';
-        html += '<div style="font-size:1.8em;font-weight:700;margin:5px 0;">' + char + '</div>';
-        html += '<div style="font-size:1em;font-weight:700;color:#764ba2;">' + value + '</div>';
+        html += '<td style="border:2px solid #000;padding:7px;text-align:center;width:56px;">';
+        html += '<div style="background:#667eea;color:white;font-size:0.6em;font-weight:600;padding:1px 6px;border-radius:8px;margin-bottom:3px;">' + number + '</div>';
+        html += '<div style="font-size:1.3em;font-weight:700;margin:3px 0;">' + char + '</div>';
+        html += '<div style="font-size:0.75em;font-weight:700;color:#764ba2;">' + value + '</div>';
         html += '</td>';
     }
 
@@ -792,7 +792,7 @@ function copyLetterGrid() {
     html += '</table>';
 
     // Total below table (centered)
-    html += '<div style="text-align:center;font-size:1.5em;font-weight:700;margin:20px 0;">';
+    html += '<div style="text-align:center;font-size:1.2em;font-weight:700;margin:15px 0;">';
     html += 'TOPLAM: ' + total;
     html += '</div>';
 
@@ -854,7 +854,7 @@ function copyAllResults() {
 
         html += '<table style="border-collapse:collapse;width:100%;margin:20px 0;">';
         var boxes = letterGrid.querySelectorAll('.letter-box');
-        var cols = 10; // FIXED: 10 columns per row
+        var cols = 8; // FIXED: 8 columns per row
 
         for (var i = 0; i < boxes.length; i++) {
             if (i % cols === 0) {
@@ -866,10 +866,10 @@ function copyAllResults() {
             var char = boxes[i].querySelector('.letter-box-char').textContent;
             var value = boxes[i].querySelector('.letter-box-value').textContent;
 
-            html += '<td style="border:2px solid #000;padding:10px;text-align:center;width:80px;">';
-            html += '<div style="background:#667eea;color:white;font-size:0.8em;font-weight:600;padding:2px 8px;border-radius:10px;margin-bottom:5px;">' + number + '</div>';
-            html += '<div style="font-size:1.8em;font-weight:700;margin:5px 0;">' + char + '</div>';
-            html += '<div style="font-size:1em;font-weight:700;color:#764ba2;">' + value + '</div>';
+            html += '<td style="border:2px solid #000;padding:7px;text-align:center;width:56px;">';
+            html += '<div style="background:#667eea;color:white;font-size:0.6em;font-weight:600;padding:1px 6px;border-radius:8px;margin-bottom:3px;">' + number + '</div>';
+            html += '<div style="font-size:1.3em;font-weight:700;margin:3px 0;">' + char + '</div>';
+            html += '<div style="font-size:0.75em;font-weight:700;color:#764ba2;">' + value + '</div>';
             html += '</td>';
         }
 

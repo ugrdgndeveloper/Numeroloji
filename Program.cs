@@ -14,7 +14,7 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 // Add services
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<EbcedService>();
-builder.Services.AddSingleton<NumerologyService>();
+builder.Services.AddTransient<NumerologyService>();
 
 var app = builder.Build();
 

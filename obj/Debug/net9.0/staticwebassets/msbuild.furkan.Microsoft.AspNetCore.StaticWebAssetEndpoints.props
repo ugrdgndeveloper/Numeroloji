@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 19:04:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/furkan/js/site.4m4fo7lslu.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4m4fo7lslu"},{"Name":"integrity","Value":"sha256-5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI="},{"Name":"label","Value":"_content/furkan/js/site.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"33902"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 10 Dec 2025 21:15:07 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/furkan/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"33902"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 10 Dec 2025 21:15:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Yrz6SYoHnmA7dvmlc79qFGUyti8htcKl\u002B9I7POrM9SQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"33900"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Yrz6SYoHnmA7dvmlc79qFGUyti8htcKl\u002B9I7POrM9SQ=\u0022"},{"Name":"Last-Modified","Value":"Wed, 10 Dec 2025 22:06:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/furkan/js/site.q24vuewff6.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"q24vuewff6"},{"Name":"integrity","Value":"sha256-Yrz6SYoHnmA7dvmlc79qFGUyti8htcKl\u002B9I7POrM9SQ="},{"Name":"label","Value":"_content/furkan/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"33900"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Yrz6SYoHnmA7dvmlc79qFGUyti8htcKl\u002B9I7POrM9SQ=\u0022"},{"Name":"Last-Modified","Value":"Wed, 10 Dec 2025 22:06:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/furkan/lib/bootstrap/dist/css/bootstrap-grid.bqjiyaj88i.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

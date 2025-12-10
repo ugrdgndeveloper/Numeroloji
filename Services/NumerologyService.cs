@@ -6,7 +6,7 @@ namespace Furkan.Services;
 public class NumerologyService
 {
     // Harf bilgileri (Normal, EnKüçük, Büyük, EnBüyük)
-    private static readonly FrozenDictionary<char, ArabicLetterInfo> _arabicLetterInfo = new Dictionary<char, ArabicLetterInfo>
+    private readonly FrozenDictionary<char, ArabicLetterInfo> _arabicLetterInfo = new Dictionary<char, ArabicLetterInfo>
     {
         ['ا'] = new(1, 1, 111, 13),
         ['أ'] = new(1, 1, 111, 13),
@@ -16,6 +16,12 @@ public class NumerologyService
         ['ٱ'] = new(1, 1, 111, 13),
         ['ﭐ'] = new(1, 1, 111, 13),
         ['ﭑ'] = new(1, 1, 111, 13),
+        ['\u0670'] = new(1, 1, 111, 13), // Asar (Dagger Alef)
+        ['\uFD3C'] = new(1, 1, 111, 13), // Alef + Fathatan Ligature (Final)
+        ['\uFD3D'] = new(1, 1, 111, 13), // Alef + Fathatan Ligature (Isolated)
+        ['\uFE70'] = new(1, 1, 111, 13), // Fathatan Isolated
+        ['\u06EB'] = new(1, 1, 111, 13), // Hollow Damma Above (User request)
+        ['\u063B'] = new(1, 1, 111, 13), // Keheh with two dots (potential variation)
         ['ب'] = new(2, 2, 3, 611),
         ['ج'] = new(3, 3, 53, 1035),
         ['د'] = new(4, 4, 35, 278),
@@ -51,7 +57,7 @@ public class NumerologyService
     }.ToFrozenDictionary();
 
     // Eski map sadece normal değerler için (geriye uyumluluk)
-    private static FrozenDictionary<char, int> GetArabicNormalMap()
+    private FrozenDictionary<char, int> GetArabicNormalMap()
     {
         return _arabicLetterInfo.ToFrozenDictionary(
             kvp => kvp.Key,
@@ -60,19 +66,19 @@ public class NumerologyService
     }
 
     // Şemsi Harfler (14 harf)
-    private static readonly FrozenSet<char> _shamsiLetters = new HashSet<char>
+    private readonly FrozenSet<char> _shamsiLetters = new HashSet<char>
     {
         'ت', 'ث', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ل', 'ن'
     }.ToFrozenSet();
 
     // Kameri Harfler (14 harf)
-    private static readonly FrozenSet<char> _qamariLetters = new HashSet<char>
+    private readonly FrozenSet<char> _qamariLetters = new HashSet<char>
     {
         'ا', 'ب', 'ج', 'ح', 'خ', 'ع', 'غ', 'ف', 'ق', 'ك', 'م', 'ه', 'و', 'ي'
     }.ToFrozenSet();
 
     // İbranice Gematria
-    private static readonly FrozenDictionary<char, int> _hebrewMap = new Dictionary<char, int>
+    private readonly FrozenDictionary<char, int> _hebrewMap = new Dictionary<char, int>
     {
         ['א'] = 1, ['ב'] = 2, ['ג'] = 3, ['ד'] = 4, ['ה'] = 5,
         ['ו'] = 6, ['ז'] = 7, ['ח'] = 8, ['ט'] = 9,
@@ -83,7 +89,7 @@ public class NumerologyService
     }.ToFrozenDictionary();
 
     // Yunanca Isopsephy
-    private static readonly FrozenDictionary<char, int> _greekMap = new Dictionary<char, int>
+    private readonly FrozenDictionary<char, int> _greekMap = new Dictionary<char, int>
     {
         ['α'] = 1, ['β'] = 2, ['γ'] = 3, ['δ'] = 4, ['ε'] = 5,
         ['ϛ'] = 6, ['ζ'] = 7, ['η'] = 8, ['θ'] = 9,
@@ -99,21 +105,20 @@ public class NumerologyService
         ['Φ'] = 500, ['Χ'] = 600, ['Ψ'] = 700, ['Ω'] = 800, ['Ϡ'] = 900
     }.ToFrozenDictionary();
 
-    private static readonly FrozenSet<char> _arabicDiacritics = CreateArabicDiacritics();
+    private readonly FrozenSet<char> _arabicDiacritics = CreateArabicDiacritics();
     
     private static FrozenSet<char> CreateArabicDiacritics()
     {
         var set = new HashSet<char>();
         for (int i = 0x610; i <= 0x61A; i++) set.Add((char)i);
         for (int i = 0x64B; i <= 0x65F; i++) set.Add((char)i);
-        set.Add('\u0670');
         set.Add('\u0640');
         set.Add('\u0656');
         set.Add('\u0654');
         return set.ToFrozenSet();
     }
 
-    private static readonly FrozenSet<char> _hebrewDiacritics = CreateHebrewDiacritics();
+    private readonly FrozenSet<char> _hebrewDiacritics = CreateHebrewDiacritics();
     
     private static FrozenSet<char> CreateHebrewDiacritics()
     {
@@ -125,7 +130,7 @@ public class NumerologyService
         return set.ToFrozenSet();
     }
 
-    private static readonly FrozenSet<char> _greekDiacritics = new HashSet<char>
+    private readonly FrozenSet<char> _greekDiacritics = new HashSet<char>
     {
         '\u0300', '\u0301', '\u0302', '\u0303', '\u0304', '\u0305',
         '\u0306', '\u0307', '\u0308', '\u0309', '\u030A', '\u030B',
