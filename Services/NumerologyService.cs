@@ -16,12 +16,6 @@ public class NumerologyService
         ['ٱ'] = new(1, 1, 111, 13),
         ['ﭐ'] = new(1, 1, 111, 13),
         ['ﭑ'] = new(1, 1, 111, 13),
-        ['\u0670'] = new(1, 1, 111, 13), // Asar (Dagger Alef)
-        ['\uFD3C'] = new(1, 1, 111, 13), // Alef + Fathatan Ligature (Final)
-        ['\uFD3D'] = new(1, 1, 111, 13), // Alef + Fathatan Ligature (Isolated)
-        ['\uFE70'] = new(1, 1, 111, 13), // Fathatan Isolated
-        ['\u06EB'] = new(1, 1, 111, 13), // Hollow Damma Above (User request)
-        ['\u063B'] = new(1, 1, 111, 13), // Keheh with two dots (potential variation)
         ['ب'] = new(2, 2, 3, 611),
         ['ج'] = new(3, 3, 53, 1035),
         ['د'] = new(4, 4, 35, 278),
