@@ -8,7 +8,8 @@ namespace Furkan.Models;
 public record CalculationRequest(
     [Required(ErrorMessage = "Metin gereklidir")]
     string Text,
-    AlphabetType Alphabet = AlphabetType.Arabic
+    AlphabetType Alphabet = AlphabetType.Arabic,
+    CalculationType Type = CalculationType.Normal
 );
 
 // Response Models
@@ -54,6 +55,7 @@ public record EbcedRow(string Char, int Value);
 [JsonSerializable(typeof(List<EbcedRow>))]
 [JsonSerializable(typeof(ErrorResponse))]
 [JsonSerializable(typeof(AlphabetType))]
+[JsonSerializable(typeof(CalculationType))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
 {
 }

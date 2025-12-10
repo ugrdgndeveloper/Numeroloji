@@ -67,7 +67,7 @@ numApi.MapPost("/", Results<Ok<CalculationResult>, BadRequest<ErrorResponse>, Pr
 
     try
     {
-        var result = service.Calculate(request.Text, request.Alphabet);
+        var result = service.Calculate(request.Text, request.Alphabet, request.Type);
         return TypedResults.Ok(result);
     }
     catch (Exception ex)

@@ -38,7 +38,7 @@ public class NumerologyService
         ['ع'] = new(70, 10, 130, 192),
         ['ف'] = new(80, 8, 81, 651),
         ['ص'] = new(90, 6, 95, 590),
-        ['ق'] = new(100, 10, 181, 651),
+        ['ق'] = new(100, 10, 181, 47),
         ['ر'] = new(200, 8, 201, 502),
         ['ش'] = new(300, 6, 360, 1077),
         ['ت'] = new(400, 4, 401, 320),
@@ -132,11 +132,11 @@ public class NumerologyService
         '\u0313', '\u0314', '\u0342', '\u0345'
     }.ToFrozenSet();
 
-    public CalculationResult Calculate(string input, AlphabetType alphabet)
+    public CalculationResult Calculate(string input, AlphabetType alphabet, CalculationType type = CalculationType.Normal)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(input, nameof(input));
 
-        var map = GetMap(alphabet);
+        var map = GetMap(alphabet, type);
         var diacritics = GetDiacritics(alphabet);
 
         var cleanChars = input
@@ -223,9 +223,15 @@ public class NumerologyService
         return total;
     }
 
-    private FrozenDictionary<char, int> GetMap(AlphabetType alphabet) => alphabet switch
+    private FrozenDictionary<char, int> GetMap(AlphabetType alphabet, CalculationType type = CalculationType.Normal) => alphabet switch
     {
-        AlphabetType.Arabic => GetArabicNormalMap(),
+        AlphabetType.Arabic => type switch 
+        {
+            CalculationType.Smallest => _arabicLetterInfo.ToFrozenDictionary(k => k.Key, v => v.Value.Smallest),
+            CalculationType.Big => _arabicLetterInfo.ToFrozenDictionary(k => k.Key, v => v.Value.Big),
+            CalculationType.Biggest => _arabicLetterInfo.ToFrozenDictionary(k => k.Key, v => v.Value.Biggest),
+            _ => GetArabicNormalMap()
+        },
         AlphabetType.Hebrew => _hebrewMap,
         AlphabetType.Greek => _greekMap,
         _ => GetArabicNormalMap()
@@ -259,3 +265,11 @@ public enum AlphabetType
 }
 
 public record AlphabetInfo(string SystemName, string LanguageName, string Direction);
+
+public enum CalculationType
+{
+    Normal,
+    Smallest,
+    Big,
+    Biggest
+}

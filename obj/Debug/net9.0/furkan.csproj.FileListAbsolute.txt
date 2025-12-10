@@ -16,9 +16,7 @@
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.RazorAssemblyInfo.cs
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.sourcelink.json
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/scopedcss/bundle/furkan.styles.css
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-1jqgd0og1a.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/2e4s35qhzg-61n19gt1b8.gz
-/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/iio4hkrue4-bqjiyaj88i.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/2s9xyontnd-c2jlpeoesf.gz
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/4pl1m6i314-erw9l3u2r3.gz
@@ -92,3 +90,5 @@
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.pdb
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/furkan.genruntimeconfig.cache
 /Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/ref/furkan.dll
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-nmanax4h51.gz
+/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-4m4fo7lslu.gz

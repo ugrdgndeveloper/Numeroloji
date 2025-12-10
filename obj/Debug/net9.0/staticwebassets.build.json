@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8v1STyJ5J4+fSHjw1bjtejzCQ3XZGcdZYlD5j3oOKrs=",
+  "Hash": "pTEvZekrVBStKq7k4KG8dE0O3oC7gqplpWZlX0DG1c0=",
   "Source": "furkan",
   "BasePath": "_content/furkan",
   "Mode": "Default",
@@ -1025,12 +1025,12 @@
       "OriginalItemSpec": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "Identity": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-4m4fo7lslu.gz",
       "SourceId": "furkan",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/furkan",
-      "RelativePath": "js/site#[.{fingerprint=3ybke5hbl8}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=4m4fo7lslu}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1039,8 +1039,8 @@
       "RelatedAsset": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ef5o0zvone",
-      "Integrity": "hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=",
+      "Fingerprint": "yeux1ws8gz",
+      "Integrity": "xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js"
@@ -1298,12 +1298,12 @@
       "OriginalItemSpec": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-1jqgd0og1a.gz",
+      "Identity": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-nmanax4h51.gz",
       "SourceId": "furkan",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/furkan",
-      "RelativePath": "css/site#[.{fingerprint=1jqgd0og1a}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=nmanax4h51}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1312,8 +1312,8 @@
       "RelatedAsset": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "4y0nz8iib4",
-      "Integrity": "dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ=",
+      "Fingerprint": "6a2t0l00jb",
+      "Integrity": "Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/css/site.css"
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1jqgd0og1a",
-      "Integrity": "s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc=",
+      "Fingerprint": "nmanax4h51",
+      "Integrity": "cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3ybke5hbl8",
-      "Integrity": "hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=",
+      "Fingerprint": "4m4fo7lslu",
+      "Integrity": "5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
@@ -2644,13 +2644,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.1jqgd0og1a.css",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-1jqgd0og1a.gz",
+      "Route": "css/site.css",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-nmanax4h51.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000275709953"
+          "Quality": "0.000244857982"
         }
       ],
       "ResponseHeaders": [
@@ -2660,19 +2660,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3626"
+          "Value": "4083"
         },
         {
           "Name": "ETag",
-          "Value": "\"dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ=\""
+          "Value": "\"Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:00:51 GMT"
+          "Value": "Wed, 10 Dec 2025 21:13:57 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2688,26 +2688,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc=\""
+          "Value": "W/\"cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "1jqgd0og1a"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc="
+          "Value": "sha256-cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU="
         }
       ]
     },
     {
-      "Route": "css/site.1jqgd0og1a.css",
+      "Route": "css/site.css",
       "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2717,7 +2709,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19819"
+          "Value": "21894"
         },
         {
           "Name": "Content-Type",
@@ -2725,11 +2717,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc=\""
+          "Value": "\"cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:00:51 GMT"
+          "Value": "Wed, 10 Dec 2025 21:13:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-nmanax4h51.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4083"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Dec 2025 21:13:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.nmanax4h51.css",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-nmanax4h51.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000244857982"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4083"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Dec 2025 21:13:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nmanax4h51"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.nmanax4h51.css",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21894"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Dec 2025 21:13:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2739,7 +2876,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1jqgd0og1a"
+          "Value": "nmanax4h51"
         },
         {
           "Name": "label",
@@ -2747,13 +2884,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc="
+          "Value": "sha256-cXy4yAfPSl6y0otlQF+gm9oZjKqYXF9ROEjI8JstIWU="
         }
       ]
     },
     {
-      "Route": "css/site.1jqgd0og1a.css.gz",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-1jqgd0og1a.gz",
+      "Route": "css/site.nmanax4h51.css.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-nmanax4h51.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2762,7 +2899,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3626"
+          "Value": "4083"
         },
         {
           "Name": "Content-Type",
@@ -2770,11 +2907,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ=\""
+          "Value": "\"Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:00:51 GMT"
+          "Value": "Wed, 10 Dec 2025 21:13:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2792,7 +2929,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1jqgd0og1a"
+          "Value": "nmanax4h51"
         },
         {
           "Name": "label",
@@ -2800,144 +2937,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-1jqgd0og1a.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000275709953"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3626"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:00:51 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "19819"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:00:51 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-s2ggmq/ZExayApVmKEFMs3V78+4aH7ONiY+E0+523mc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/z9x846n4sk-1jqgd0og1a.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3626"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Nov 2025 21:00:51 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-dNhOGmx04ovKJ4AlGimg4glMo7/Pdh6E/off75wSrkQ="
+          "Value": "sha256-Mtu8UkiK7KSseHBMMhVJPGaLghjYDefGb3vGo5l1oWE="
         }
       ]
     },
@@ -3240,13 +3240,13 @@
       ]
     },
     {
-      "Route": "js/site.3ybke5hbl8.js",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "Route": "js/site.4m4fo7lslu.js",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-4m4fo7lslu.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000152765047"
+          "Quality": "0.000138389150"
         }
       ],
       "ResponseHeaders": [
@@ -3256,15 +3256,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6545"
+          "Value": "7225"
         },
         {
           "Name": "ETag",
-          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
+          "Value": "\"xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+          "Value": "Wed, 10 Dec 2025 21:15:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3284,13 +3284,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
+          "Value": "W/\"5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3ybke5hbl8"
+          "Value": "4m4fo7lslu"
         },
         {
           "Name": "label",
@@ -3298,12 +3298,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
+          "Value": "sha256-5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI="
         }
       ]
     },
     {
-      "Route": "js/site.3ybke5hbl8.js",
+      "Route": "js/site.4m4fo7lslu.js",
       "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3313,7 +3313,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31427"
+          "Value": "33902"
         },
         {
           "Name": "Content-Type",
@@ -3321,11 +3321,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
+          "Value": "\"5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+          "Value": "Wed, 10 Dec 2025 21:15:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3335,7 +3335,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3ybke5hbl8"
+          "Value": "4m4fo7lslu"
         },
         {
           "Name": "label",
@@ -3343,13 +3343,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
+          "Value": "sha256-5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI="
         }
       ]
     },
     {
-      "Route": "js/site.3ybke5hbl8.js.gz",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "Route": "js/site.4m4fo7lslu.js.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-4m4fo7lslu.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3358,7 +3358,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6545"
+          "Value": "7225"
         },
         {
           "Name": "Content-Type",
@@ -3366,11 +3366,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
+          "Value": "\"xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+          "Value": "Wed, 10 Dec 2025 21:15:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3388,7 +3388,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3ybke5hbl8"
+          "Value": "4m4fo7lslu"
         },
         {
           "Name": "label",
@@ -3396,18 +3396,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM="
+          "Value": "sha256-xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k="
         }
       ]
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-4m4fo7lslu.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000152765047"
+          "Quality": "0.000138389150"
         }
       ],
       "ResponseHeaders": [
@@ -3417,15 +3417,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6545"
+          "Value": "7225"
         },
         {
           "Name": "ETag",
-          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
+          "Value": "\"xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+          "Value": "Wed, 10 Dec 2025 21:15:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3445,13 +3445,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
+          "Value": "W/\"5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
+          "Value": "sha256-5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI="
         }
       ]
     },
@@ -3466,7 +3466,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31427"
+          "Value": "33902"
         },
         {
           "Name": "Content-Type",
@@ -3474,11 +3474,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8=\""
+          "Value": "\"5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+          "Value": "Wed, 10 Dec 2025 21:15:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3488,13 +3488,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hbRzN3UOZN6jSgbtEcQVvjgfBy7R2v5LgWrvTY1CEA8="
+          "Value": "sha256-5FYbHgeS1iDK6JDZkYXRUu5gEqGTLppes3UF4wQ3IZI="
         }
       ]
     },
     {
       "Route": "js/site.js.gz",
-      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-3ybke5hbl8.gz",
+      "AssetFile": "/Users/furkanugurdogan/Projects/furkan/furkan/obj/Debug/net9.0/compressed/ndzxsu6xfu-4m4fo7lslu.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3503,7 +3503,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6545"
+          "Value": "7225"
         },
         {
           "Name": "Content-Type",
@@ -3511,11 +3511,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM=\""
+          "Value": "\"xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 01 Dec 2025 20:21:02 GMT"
+          "Value": "Wed, 10 Dec 2025 21:15:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3533,7 +3533,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hnKyVnJDv03iGIxOMFOmFfPoDUuzV0IXE29X3VNTjiM="
+          "Value": "sha256-xgZmaz6+j770fr2DJPbKNwoqGJzLDcCGTiifp4V7h4k="
         }
       ]
     },

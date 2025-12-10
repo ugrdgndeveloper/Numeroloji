@@ -217,22 +217,22 @@
                 </button>
             </div>
             <div class="variations-grid">
-                <div class="variation-card">
+                <div class="variation-card active" onclick="selectCalculationType('Normal')" data-type="Normal" style="cursor: pointer;">
                     <div class="variation-label">Küçük Ebced</div>
                     <div class="variation-value" id="smallEbced">0</div>
                     <div class="variation-desc">Normal hesaplama</div>
                 </div>
-                <div class="variation-card">
+                <div class="variation-card" onclick="selectCalculationType('Big')" data-type="Big" style="cursor: pointer;">
                     <div class="variation-label">Büyük Ebced</div>
                     <div class="variation-value" id="bigEbced">0</div>
                     <div class="variation-desc">+ ال (Elif-Lam)</div>
                 </div>
-                <div class="variation-card">
+                <div class="variation-card" onclick="selectCalculationType('Smallest')" data-type="Smallest" style="cursor: pointer;">
                     <div class="variation-label">En Küçük Ebced</div>
                     <div class="variation-value" id="smallestEbced">0</div>
                     <div class="variation-desc">Tekrarsız harfler</div>
                 </div>
-                <div class="variation-card">
+                <div class="variation-card" onclick="selectCalculationType('Biggest')" data-type="Biggest" style="cursor: pointer;">
                     <div class="variation-label">En Büyük Ebced</div>
                     <div class="variation-value" id="biggestEbced">0</div>
                     <div class="variation-desc">Maksimum değer</div>
@@ -241,18 +241,37 @@
             
             <h3 style="margin-top: 20px;">🌙 Şemsi ve Kameri Harfler</h3>
             <div class="shamsi-qamari-grid">
-                <div class="sq-card shamsi">
+                <div class="sq-card shamsi" onclick="selectCalculationType('Shamsi')" data-type="Shamsi" style="cursor: pointer; position: relative;">
+                    <button class="help-btn" onclick="showHelp(event, 'shamsiModal')" title="Bilgi">?</button>
                     <div class="sq-icon">☀️</div>
                     <div class="sq-label">Şemsi Harfler</div>
                     <div class="sq-value" id="shamsiCount">0</div>
-                    <div class="sq-desc">ت، ث، د، ذ، ر، ز، س، ش، ص، ض، ط، ظ، ل، ن</div>
+                    <div class="sq-desc">Güneş harfleri</div>
                 </div>
-                <div class="sq-card qamari">
+                <div class="sq-card qamari" onclick="selectCalculationType('Qamari')" data-type="Qamari" style="cursor: pointer; position: relative;">
+                    <button class="help-btn" onclick="showHelp(event, 'qamariModal')" title="Bilgi">?</button>
                     <div class="sq-icon">🌙</div>
                     <div class="sq-label">Kameri Harfler</div>
                     <div class="sq-value" id="qamariCount">0</div>
-                    <div class="sq-desc">ا، ب، ج، ح، خ، ع، غ، ف، ق، ك، م، ه، و، ي</div>
+                    <div class="sq-desc">Ay harfleri</div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="shamsiModal" class="custom-modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('shamsiModal')">&times;</span>
+                <h3>☀️ Şemsi Harfler (14 Adet)</h3>
+                <p class="letter-list">ت، ث، د، ذ، ر، ز، س، ش، ص، ض، ط، ظ، ل، ن</p>
+            </div>
+        </div>
+
+        <div id="qamariModal" class="custom-modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('qamariModal')">&times;</span>
+                <h3>🌙 Kameri Harfler (14 Adet)</h3>
+                <p class="letter-list">ا، ب، ج، ح، خ، ع، غ، ف، ق، ك، م، ه، و، ي</p>
             </div>
         </div>
 
